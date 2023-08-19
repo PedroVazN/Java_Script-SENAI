@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<body>
+
+    <h2>Switch em JavaScript</h2>
+    <p id="demo"></p>
+
+    <script>
+
+        let day;
+        switch (new Date().getDay()) {
+
+            case 0:
+                day = "Domingo";
+                break;
+            case 1:
+                dia = "segunda";
+                break;
+            case 2:
+                day = "Terça";
+                break;
+            case 3:
+                dia = "Quarta";
+                break;
+            case 4:
+                day = "Quinta";
+                break;
+            case 5:
+                dia = "Sexta";
+                break;
+            case 6:
+                day = "Sábado";
+                break;
+        }
+        document.getElementById("demo").innerHTML = "Hoje é " +dia;
+
+    </script>
+
+</body>
+
+</html>

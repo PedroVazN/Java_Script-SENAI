@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<body>
+
+    <h2>Método ForEach()</h2>
+    <p>Chama uma função uma vez para cada elmento do array</p>
+    <p id="demo"></p>
+
+    <script>                
+
+        const numeros = [45, 5, 9, 16, 25];
+
+        let texto = " ";
+        numeros.forEach(minhaFuncao);
+        document.getElementById("demo").innerHTML = texto;
+
+        function minhaFuncao(valor, indice, array) {
+            texto += valor + "<br>";
+        }
+
+    </script>
+
+
+</body>
+
+</html>
