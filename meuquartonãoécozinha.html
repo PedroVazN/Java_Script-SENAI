@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>JavaScript promise</h2>
+    <p>Espere 3 segundos (3000 milissegundos) para esta pagina mudar.</p>
+    <h1 id="demo"></h1>
+
+    <script>
+      const promessa = new Promise(function(cumprida, descumprida){
+
+          setTimeout(function()
+          {cumprida("Se entrar, sai comida");},3000);
+          });
+
+          promessa.then(function(valor){
+            document.getElementById("demo").innerHTML = valor;
+          });
+    </script>
+  </body>
+</html>
