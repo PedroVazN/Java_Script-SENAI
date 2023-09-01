@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <p id="demo"></p>
+      <p class="almoco"></p>
+      <p class="almoco"></p>
+      <p>Encontrando elementos HTML pelo query selector</p>
+      <script>
+        document.getElementById("demo").innerHTML =
+          "Muitos pagam de amigo, mas ficam só de crocodilagem. <p>-- Shocks 30/08/2023";
+
+        const elementos = document.getElementsByTagName("p");
+        elementos[0].innerHTML =
+          "É dificil esperar por algo que nunca vai acontecer.";
+        elementos[1].innerHTML = "a vida é dura, pra quem é mole.";
+
+        const pratos = document.getElementsByClassName("almoco");
+        pratos[0].innerHTML = "Frango";
+        pratos[1].innerHTML = "Carne";
+
+        const sobremesa = document.querySelectorAll("p.almoco");
+        sobremesa[0].innerHTML = "Pudim";
+        sobremesa[1].innerHTML = "Arroz Doce";
+      </script>
+    </div>
+  </body>
+</html>

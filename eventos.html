@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      color: #000000;
+      background-color: #0942ff;
+      border: 1px solid #ff00c8;
+      border: 1px solid #ff00c8;
+      border: 1px solid #ffe600;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    body {
+      background-color: #e100ff;
+      color: #ff0000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 20%;
+      height: 20%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: middle;
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      align-items: center;
+      justify-content: center;
+      border: #000000;
+      box-shadow: 5px 5px 5px #fd0000;
+      margin-left: 40%;
+    }
+
+    .bleble {
+      margin-left: 45%;
+
+      box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.75);
+    }
+  </style>
+
+  <body>
+    <h2>Eventos JavaScript</h2>
+
+    <img src="./250px-Carros_2_Pôster.png" alt="carros" />
+
+    <h2 onclick="this.innerHTML='I see you!'">Peekaboo! (clique aqui)</h2>
+
+    <h2 onclick="mudaTexto(this)">Clique aqui para receber um milhão!</h2>
+
+    <h2 id="cabecalho">Clique aqui para saber a sua sorte!</h2>
+
+    <div
+      class="bleble"
+      onmouseover="MousePorCima(this)"
+      onmouseout="MouseSaiu(this)"
+      style="
+        background-color: #ffffff;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Passe o mouse!
+    </div>
+    <h2 id="meuH2">Este exemplo usa o metodo addEvenetListener() para atribuir um clique a este titulo (clique aqui)</h2>
+
+    <script>
+      function mudaTexto(id) {
+        id.innerHTML = "Um milhão";
+      }
+
+      document.getElementById("cabecalho").onclick = exibirSorte;
+
+      function exibirSorte() {
+        document.getElementById("cabecalho").innerHTML =
+          "Voce terá uma vida longa!";
+      }
+      function MousePorCima(objeto) {
+        objeto.innerHTML = "Obrigado!";
+      }
+      function MouseSaiu(objeto) {
+        objeto.innerHTML = "Passe o mouse!";
+      }
+      document
+        .getElementById("meuH2")
+        .addEventListener("click", function () {
+          alert("Vida longa e prostata!");
+        });
+    </script>
+  </body>
+</html>
