@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<body>
+
+    <h2>Laço For In no JavaScript</h2>
+    <p>A estrutura de repetição For in faz uma Varreuda pelas Propriedades de um objeto</p>
+    <p id="demo"></p>
+
+    <script>
+        const pessoa = ["Janeleide", "Eça", 25]
+
+        let texto = "";
+        for (let x in pessoa) {
+            texto += pessoa[x] + " "
+        }
+        document.getElementById("demo").innerHTML = texto;
+    </script>
+
+</body>
+
+</html>

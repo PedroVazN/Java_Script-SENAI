@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+
+</body>
+
+    <h2>Conjunto de dados no JavaScript</h2>
+    <p>Criar um conjunto de dados a partir de um array:</p>
+    <p id="demo"></p>
+
+    <script>
+        //Vamos criar um conjunto de dados no JavaScript
+        const letras = new Set(["a", "b", "c"]);
+
+        //Vamos acresentar mais elementos 
+        letras.add("d")
+        letras.add("a")
+
+        //Exibir o tamanho do conjunto
+        document.getElementById("demo").innerHTML = letras.size;
+
+    </script>
+
+</html>

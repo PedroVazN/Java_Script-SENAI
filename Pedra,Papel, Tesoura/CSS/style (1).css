@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    border: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    margin-left: 30px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    left: 50px;
+}
+
+
+#imagemJogador,
+#imagemComputador {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+#resultado,
+#pontuacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fundo {
+    background-color: #6c5ce7;
+    color: white;
+}
+
+.Botao {
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+    margin-bottom: 10px;
+  }
+  
+  .Botao:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+  }
+  .card {
+    --background: linear-gradient(to left, #ffffff 0%, #ffffff 100%);
+    width: 100px;
+    height: 254px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #03afff;
+    background: var(--background);
+    position: absolute;
+    margin-left: 350px;
+
+   }
+   
+   .card::after {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info {
+    --color: #575757;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 640%;
+    height: 200%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   .card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+   }
+   
+   /*Hover*/
+   .card:hover::after {
+    opacity: 0;
+   }
+   
+   .card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+   
