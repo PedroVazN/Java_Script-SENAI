@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>Async/await no JavaScript</h2>
+    <p id="demo"></p>
+
+    <script>
+      function exibir(algo) {
+        document.getElementById("demo").innerHTML = algo;
+      }
+
+      async function minhaFunc() {
+        return "O seu sorriso é o poema mais lindo que meus olhos já leram. ";
+      }
+
+      minhaFunc().then(
+        function (valor) {
+          exibir(valor);
+        },
+        function (erro) {
+          exibir(erro);
+        }
+      );
+
+      async function exibir2() {
+        let promise = new Promise(function (cumprida) {
+          setTimeout(function () {
+            cumprida("Que casa comigo, pelamordeDeus!!");
+          }, 3000);
+        });
+        document.getElementById("demo").innerHTML = await promise;
+      }
+      exibir2();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>JavaScript HTML DOM</h2>
+    <p>Como acrescentar um novo elemento</p>
+    <div id="div1">
+      <p id="p1">Este é um parágrafo</p>
+      <p id="p2">Este é outro parágrafo</p>
+    </div>
+
+    <script>
+      //Inserir elemento no fim de um elemento ancestral
+      const paragrafo = document.createElement("p");
+      const no = document.createTextNode("Isto é novo.");
+      paragrafo.appendChild(no);
+      const elemento = document.getElementById("div1");
+      elemento.appendChild(paragrafo);
+      //Inserir elemento antes de outro elemento descendente
+      const paragrafo2 = document.createElement("p");
+      const no2 = document.createTextNode("Isto é novo, mas vai antes");
+      paragrafo2.appendChild(no2);
+      const filho = document.getElementById("p1");
+      elemento.insertBefore(paragrafo2, filho);
+
+      //Removendo elemento
+      document.getElementById("p2").remove();
+
+      //Removendo elemento filho
+      elemento.removeChild(filho);
+
+      //Substituindo um elemento por outro (paragrafo2 por paragrafo)
+      elemento.replaceChild(paragrafo, paragrafo2);
+
+      
+    </script>
+  </body>
+</html>
