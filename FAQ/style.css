@@ -1,0 +1,105 @@
+.faq-button {
+    border-radius: 5%;
+    
+}
+
+.faq-trocar {
+    display: none;
+    margin: 10px;
+}
+
+div.prin {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+
+}
+
+button {
+    width: 500px;
+    height: 50px;
+
+    margin-top: 20px;
+    margin-right:;
+}
+
+span {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+
+}
+.card2{
+    margin-top: 30px;
+    background: rgb(194, 203, 232);
+    
+    box-shadow: 20px 20px 60px #544e4e,
+        -20px -20px 60px #ffffff;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+    width: 500px;
+    margin-left: 365px;
+}
+
+.card {
+    width: 1170px;
+    height: 1050px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+    margin: 25px;
+    margin-left: 30px;
+
+    
+}
+
+@keyframes trocarCores {
+
+    0%,
+    100% {
+        background-color: rgb(255, 172, 172);
+    }
+
+    33% {
+        background-color: rgb(164, 244, 164);
+    }
+
+    66% {
+        background-color: rgb(192, 192, 255);
+    }
+}
+
+body {
+    animation: trocarCores 0.5s linear infinite;
+    background-color: red;
+
+    }
+
+    @keyframes trocarCores {
+        0% {
+          background-color: rgb(252, 166, 166);
+        }
+        33% {
+          background-color: rgb(183, 255, 183);
+        }
+        66% {
+          background-color: rgb(178, 178, 255);
+        }
+        100% {
+          background-color: rgb(255, 172, 172);
+        }
+      }
+      
+      button {
+        animation: trocarCores 2s linear infinite;
+      }
+      
