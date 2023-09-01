@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <h2>Object.values()</h2>
+        <p>Object.values() converte um objeto em um array.</p>
+
+        <p id="demo"></p>
+        <script>
+            const pessoa = {
+                nome: "Nicomedes",
+                idade: 38,
+                city: "Nova Iorque"
+            };
+
+            document.getElementById("demo").innerHTML  = Object.values(pessoa);
+        </script>
+    </body>
+</html>

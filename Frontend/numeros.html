@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Números no JavaScript</h2>
+        <p>Números podem ser escritos com ou sem vírgula</p>
+        <p id="demo1"></p>
+        <p>
+            Números muito grandes e muito pequenos podem ser escritos em notação
+            científica.
+        </p>
+        <p id="demo2"></p>
+        <p>
+            Números inteiros (escritos sem vírgula ou ponto decimal e sem expoente)
+            são precisos até 15 dígitos.
+        </p>
+        <p id="demo3"></p>
+        <p>
+            Aritmética de ponto flutuante nem sempre é 100% exata;
+        </p>
+        <p id="demo4"></p>
+        <p>
+            Se você adicionar dois números, o resultado será um número.
+        </p>
+        <p id="demo5"></p>
+        <p>
+            Se você adicionar duas STRINGs numéricas, o resultado será
+            uma string concatenada.
+        </p>
+        <p id="demo6"></p>
+        <p>
+            Se você adicionar um número e uma string, o resultado será
+            uma string concatenada.
+        </p>
+        <p id="demo7"></p>
+        <p>
+            Um erro comum é esperar que o resultado de "O resultado é" + x + y seja 30.
+        </p>
+        <p id="demo8"></p>
+        <p>
+            Um erro comum é esperar que o resultado abaixo seja 102030
+        </p>
+        <p id="demo9"></p>
+        <p>
+            O JavaScript sempre tentará converter strings em números em todas
+            as outras operações numéricas.
+        </p>
+        <p id="demo10"></p>
+
+        <script>
+            let x = 3.14;
+            let y = 3;
+            document.getElementById("demo1").innerHTML = x + "<br>" + y;
+            x = 123e5;
+            y = 123e-5;
+            document.getElementById("demo2").innerHTML = x + "<br>" + y;
+            x = 999999999999999;
+            y = 9999999999999999;
+            document.getElementById("demo3").innerHTML = x + "<br>" + y;
+            x = 0.2 + 0.1;
+            document.getElementById("demo4").innerHTML = "0.2 + 0.1 = " + x;
+            x = 10;
+            y = 20;
+            let z = x + y;
+            document.getElementById("demo5").innerHTML = z;
+            x = "10";
+            y = "20";
+            z = x + y;
+            document.getElementById("demo6").innerHTML = z;
+            x = 10;
+            y = "20";
+            z = x + y;
+            document.getElementById("demo7").innerHTML = z;
+            x = 10;
+            y = 20;
+            document.getElementById("demo8").innerHTML = "O resultado é: " + x + y;
+            x = 10;
+            y = 20;
+            z = "30";
+            let resultado = x + y + z;
+            document.getElementById("demo9").innerHTML = resultado;
+            x = "100";
+            y = "10";
+            z = x/y;
+            document.getElementById("demo10").innerHTML = z;
+        </script>
+        
+    </body>
+</html>

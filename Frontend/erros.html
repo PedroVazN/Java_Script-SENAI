@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Como lidar com erros no JavaScript</h2>
+
+        <p>Vamos produzir um erro proposital no JavaScript</p>
+
+        <p id="demo1"></p>
+        <p>Por favor insira um número entre 5 e 10:</p>
+        <input id="demo2" type="number" min="5" max="10" step="1">
+        <button type="button" onclick="minhaFuncao()">Teste a entrada</button>
+        <p id="p1"></p>
+        <script>
+            try{
+                adddlert("Bem-vindo, hóspede!");
+            }
+            catch(e){
+                document.getElementById("demo1").innerHTML = e.message;
+            }
+            function minhaFuncao(){
+                const mensagem = document.getElementById("p1");
+                mensagem.innerHTML = "";
+                
+                let x = document.getElementById("demo2").value;
+                try{
+                    if(x.trim() == ""){
+                        throw "não está entre 5 e 10!";
+                    }
+                    if(isNaN(x)) {
+                        throw "não é um número!";
+                    }
+                    x = Number(x);
+                    if(x < 5){
+                        throw "muito baixa.";
+                    }
+                    if(x > 10){
+                        throw "muito alta."
+                    }
+                }
+                catch(e){
+                    mensagem.innerHTML = "A entrada é " + e;
+                }
+                finally{
+                    document.getElementById("demo2").value = "";
+                }
+            }
+        </script>
+    </body>
+</html>

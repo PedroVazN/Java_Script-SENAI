@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <h1>Arrays em JavaScript</h1>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <script>
+            const carros = [
+                "Ford", 
+                "Lamborghini", 
+                "Volvo"
+            ];
+            document.getElementById("demo1").innerHTML = carros;
+            const maiscarros = [];
+            maiscarros[0] = "Fiat";
+            maiscarros[1] = "Jaguar";
+            maiscarros[2] = "Maseratti";
+            document.getElementById("demo2").innerHTML = maiscarros;
+            let carro = carros[1];
+            document.getElementById("demo3").innerHTML = carro;
+
+        </script>
+    </body>
+</html>

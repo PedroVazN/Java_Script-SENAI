@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            const pessoa = {nome: "Gilseia", idade: 40, cabelo: "castanho"};
+            //document.getElementById("demo").innerHTML = pessoa.nome + 
+            //    " tem " + pessoa.idade + " anos.";
+            pessoa.sobrenome = "Almeida";
+            pessoa.nome_completo = function(){
+                return this.nome + " " + this.sobrenome;
+            }
+            document.getElementById("demo").innerHTML = "O nome completo dela é " +
+                pessoa.nome_completo();
+        </script>        
+    </body>
+</html>

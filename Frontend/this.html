@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Palavra-chave this no JavaScript</h2>
+    <p>Palavra chave <b>this</b> se refere ao objeto <b>pessoa.</b></p>
+    <p>Porque o <b>nomeCompleto()</b>é um método do objeto pessoa.</p>
+
+    <p id="demo"></p>
+    <p>Neste exemplo, <b>this</b> se refere ao objeto window:</p>
+    <p id="demo2"></p>
+    <p>Usado com um gerenciador de eventos, this se refere ao próprio elemento que gerou 
+        o evento.
+    </p>
+    <p id="demo3"></p>
+    <button onclick="this.style.display='none'">Clique em mim para me remover!</button>
+    <script>
+        let nome = "Elisângela";
+        //Criar objeto:
+        const pessoa = {
+            nome: "Gilberto", 
+            sobrenome: "Silva",
+            id: 5566,
+            nomeCompleto: function(){
+                return this.nome + " " + this.sobrenome;
+            }
+        };
+        //Exibir dados do objeto:
+        document.getElementById("demo").innerHTML = pessoa.nomeCompleto();
+        
+        document.getElementById("demo2").innerHTML = this;
+        
+
+    </script>
+
+</body>
+</html>

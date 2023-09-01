@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <h2>Erros em JavaScript</h2>
+        <p>
+            Não é possível definir como 500 o número de digitos significativos
+             de um número:
+        </p>
+        <p id="demo1"></p>
+        <p>Não é possível usar o valor de uma variável não existente:</p>
+        <p id="demo2"></p>
+        <p>Não é possível executar código que contenha erro de sintaxe:</p>
+        <p id="demo3"></p>
+        <p>Não é possível converter um número para letra maiúscula</p>
+        <p id="demo4"></p>
+        <p>Alguns caracteres não podem ser decodificados com decodeURI():</p>
+        <p id="demo5"></p>
+
+        <script>
+            let num = 1;
+            try{
+                num.toPrecision(500);
+            }
+            catch(e){
+                document.getElementById("demo1").innerHTML = e.name;
+            }
+            let x = 5;
+            //let y;
+            try{
+                x = y + 1;
+            }
+            catch(e){
+                document.getElementById("demo2").innerHTML = e.name;
+            }
+            try{
+                eval("alert('Alô!)")
+            }
+            catch(e){
+                document.getElementById("demo3").innerHTML = e.name;
+            }
+            try{
+                num.toUpperCase();
+            }
+            catch(e){
+                document.getElementById("demo4").innerHTML = e.name;
+            }
+            try{
+                decodeURI("%%%");
+            }
+            catch(e){
+                document.getElementById("demo5").innerHTML = e.name;
+            }
+        </script>
+    </body>
+</html>

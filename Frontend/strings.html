@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Template Literals</h1>
+        <p>Os Template Literals permitem variáveis dentro de strings</p>
+        
+        <p id="demo"></p>
+
+        <p>Template literals não são suportados pelo Internet Explorer.</p>
+
+        <script>
+            let nome = "Austregésilo";
+            let sobrenome = "Athaíde";
+
+            let texto = `Bem-vindo ${nome} ${sobrenome}!`;
+
+            document.getElementById("demo").innerHTML = texto;
+        </script>
+    </body>
+</html>

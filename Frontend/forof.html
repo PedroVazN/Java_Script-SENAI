@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Laço For Of no JavaScript</h2>
+        <p>A estrutura de repetição For Of o valor de elemento de um array ou
+            objeto, em vez de retornar o índice ou a chave.
+        </p>
+        <p id="demo"></p>
+        <script>
+            const pessoa = ["Janeleide", "Eça", 25];
+
+            let texto = "";
+            for (let x of pessoa){
+                texto += x + " ";
+            }
+            document.getElementById("demo").innerHTML = texto;
+
+        </script>
+    </body>
+</html>

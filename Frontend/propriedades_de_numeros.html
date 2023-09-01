@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Propriedades de números</h1>
+    <h2>Propriedade épsilon</h2>
+    <p>A diferença entre 1 e o menor número de ponto flutuante maior do que 1
+        em JavaScript é:
+    </p>
+    <p id="demo1"></p>
+    <p>
+        Number.MAX_VALUE é uma constante representando o maior número possível
+        em JavaScript.
+    </p>
+    <p id="demo2"></p>
+    <p>
+        Number.MIN_VALUE é uma constante representando o menor número possível
+        em JavaScript.
+    </p>
+    <p id="demo3"></p>
+    <script>
+        let x = Number.EPSILON;
+        document.getElementById("demo1").innerHTML = x;
+        x = Number.MAX_VALUE;
+        document.getElementById("demo2").innerHTML = x;
+        x = Number.MIN_VALUE;
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+    
+</body>
+</html>

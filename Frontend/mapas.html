@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Objetos JavaScript tipo Map</h2>
+        <p>Mapas são estruturas de dados que armazenam pares de valores
+            associados
+        </p>
+        <p>Criar um mapa a partir de um array:</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        
+        <script>
+            //Criando um mapa
+            const frutas = new Map([
+                ["maçãs", 5],
+                ["bananas", 10],
+                ["laranjas", 10]
+            ])
+            //Adicionar elementos ao mapa
+            frutas.set("abacaxis", 10);
+            //Exibir o preço dos abacaxis
+            document.getElementById("demo1").innerHTML = 
+                "O preço dos abacaxis é: " + "R$" + 
+                frutas.get("abacaxis") + ",00";
+            //Exibir se temos carambolas no mapa
+            document.getElementById("demo2").innerHTML =
+                "Temos carambolas? R.:" + frutas.has("carambolas");
+            //Exibir se temos bananas no mapa
+            document.getElementById("demo3").innerHTML =
+                "Temos bananas? R.:" + frutas.has("bananas");
+            //Apagar um elemento do mapa
+            frutas.delete("maçãs");
+             //Exibir se temos maçãs no mapa
+             document.getElementById("demo4").innerHTML =
+                "Temos maçãs? R.:" + frutas.has("maças");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Datas no JavaScript</h1>
+    <h2>Usando new Date()</h2>
+    <p>new Date() sem argumentos, cria um objeto de data com 
+        a data e a hora atual.
+    </p>
+    <p id="demo1"></p>
+    <p>new Date() com argumento de data:</p>
+    <p id="demo2"></p>
+    <script>
+        const d = new Date();
+        document.getElementById("demo1").innerHTML = d;
+        const niver = new Date("2007-04-27");
+        document.getElementById("demo2").innerHTML = niver;
+    </script>
+</body>
+</html>

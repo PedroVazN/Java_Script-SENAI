@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Break</h2>
+    <p id="demo"></p>
+    <script>
+        let texto = "";
+        for( let i = 0; i < 10; i++){
+            if( i == 3 ) {
+                break;
+            }
+            texto += "O número é " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = texto;
+    </script>
+</body>
+</html>

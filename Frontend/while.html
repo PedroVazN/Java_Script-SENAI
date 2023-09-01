@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>While no JavaScript</h2>
+
+        <p id="demo1"></p>
+        <h2>Laço for equivalente</h2>
+        <p id="demo2"></p>
+        <h2>Laço Do While</h2>
+        <p id="demo3"></p>
+        <script>
+            let texto = "";
+            let i = 0;
+            //Demonstração do laço (loop) while
+            while(i < 10){
+                texto += "<br>O número é " + i;
+                i++;
+            }
+            document.getElementById("demo1").innerHTML = texto;
+            //Laço for equivalente
+            let texto2 = "";
+            let j = 0;
+            for(;j<10;){
+                texto2 += "<br>O número é " + j;
+                j++;
+            }
+            document.getElementById("demo2").innerHTML = texto2;
+            //Laço (loop) Do-While
+            let texto3 = "";
+            let k = 0;
+            do{
+                texto3 += "<br>O número é " + k;
+                k++;
+            }while(k < 10);
+            document.getElementById("demo3").innerHTML = texto3;
+
+        </script>
+    </body>
+</html>

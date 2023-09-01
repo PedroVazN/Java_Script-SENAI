@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h2>Constantes Matemáticas do JavaScript</h2>
+    <p id="demo"></p>
+    <h2>Função de arredondamento</h2>
+    <p>A função Math.round(x) retorna o valor de x arredondado para o inteiro mais próximo:</p>
+    <p id="demo2"></p>
+    <h2>Função Math.ceil(x)</h2>
+    <p>A função Math.ceil(x) arredonda para cima para o próximo inteiro: </p>
+    <p id="demo3"></p>
+    <h2>Função Math.floor(x)</h2>
+    <p>A função Math.floor(x) arredonda para baixo para o próximo inteiro: </p>
+    <p id="demo4"></p>
+    <h2>Função Math.trunc(x)</h2>
+    <p>A função Math.trunc(x) retorna a parte inteira de um número: </p>
+    <p id="demo5"></p>
+    <h2>Função Math.pow(x, y)</h2>
+    <p>Função Math.pow(x,y) retorna p valor de x elevado à potência de y</p>
+    <p id="demo6"></p>
+    <h2>Função Math.sqrt(x)</h2>
+    <p>Função Math.sqrt(x) retorna a raiz quadrada de x</p>
+    <p id="demo7"></p>
+    <h2>Função Math.random()</h2>
+    <p>Math.random() retorna um número aleatório entre 0 (inclusive) e 1 (exclusive)</p>
+    <p id="demo8"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "<p><b>Math.E:</b> " + Math.E + "</p>" +
+        "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+        "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+        "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+        "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+        "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+        "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+        "<p><b>Math.LOG10E:</b> " + Math.LOG10E + "</p>";
+        document.getElementById("demo2").innerHTML = Math.round(4.3);
+        document.getElementById("demo3").innerHTML = Math.ceil(4.9);
+        document.getElementById("demo4").innerHTML = Math.floor(4.9999999999999);
+        document.getElementById("demo5").innerHTML = Math.trunc(4.9999999999999);
+        document.getElementById("demo6").innerHTML = Math.pow(8, 2);
+        document.getElementById("demo7").innerHTML = Math.sqrt(64);
+        document.getElementById("demo8").innerHTML = Math.round(Math.random() * 5) + 1;
+    </script>
+</body>
+</html>

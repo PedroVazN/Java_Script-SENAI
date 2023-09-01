@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Módulos JavaScript</h1>
+
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+
+        <script type="module">
+            import mensagem from "./mensagem.js"
+            import { nome, idade } from "./pessoa.js"
+
+            document.getElementById("demo1").innerHTML = mensagem();
+            document.getElementById("demo2").innerHTML = nome + " " + idade;
+        </script>
+
+    </body>
+</html>

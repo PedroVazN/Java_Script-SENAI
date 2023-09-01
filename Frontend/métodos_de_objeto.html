@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <h1>Palavra chave <b>this</b> em JavaScript</h1>
+        <p>Neste exemplo, <b>this</b> se refere ao objeto <b>pessoa</b>.</p>
+        <p><b>nomeCompleto</b> é um método do objeto <b>pessoa</b>.</p>
+
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            //Criando um objeto
+            const pessoa = {
+                nome: "Joá",
+                sobrenome: "Silva",
+                idade: 51,
+                nomeCompleto: function(){
+                    return (this.nome + " " + this.sobrenome).toUpperCase();
+                }
+            };
+
+            //Exibir dados do objeto:
+            document.getElementById("demo").innerHTML = pessoa.nomeCompleto();
+
+            //Inserindo um novo método ao objeto pessoa
+            pessoa.aposentadoria = function(){
+                return 70 - this.idade;
+            }
+
+            //Exibir o valor retornado pelo método aposentadoria()
+            document.getElementById("demo2").innerHTML = pessoa.aposentadoria();
+
+            //Método toUpperCase() embutido em um objeto
+            let mensagem = "Alô, mundo!";
+            let maiuscula = mensagem.toUpperCase();
+
+            document.getElementById("demo3").innerHTML = maiuscula;
+
+
+
+        </script>
+
+    </body>
+</html>

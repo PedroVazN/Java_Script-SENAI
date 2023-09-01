@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Métodos para Arrays em JavaScript</h1>
+    <p>A propriedade length retorna o comprimento do array.</p>
+    <p id="demo1"></p>
+    <p>O método toString() retorna um array como uma string:</p>
+    <p id="demo2"></p>
+    <p>
+        O método pop() remove o último elemento de um array.
+    </p>
+    <p id="demo3"></p>
+    <p>O método push() acrescenta um novo elemento a um array.</p>
+    <p id="demo4"></p>
+    
+    <script>
+        const frutas = ["Abacaxi", "Uva", "Maçã", "Manga"];
+        let tamanho = frutas.length;
+        document.getElementById("demo1").innerHTML = tamanho;
+        document.getElementById("demo2").innerHTML = frutas.toString();
+        frutas.pop();
+        document.getElementById("demo3").innerHTML = frutas;
+        frutas.push("Pera");
+        document.getElementById("demo4").innerHTML = frutas;
+    </script>
+</body>
+</html>

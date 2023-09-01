@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Métodos para Números em JavaScript</h1>
+    <p>O método toString() pode exibir números em base 2 até 36.</p>
+    <p id="demo1"></p>
+    <p>
+        O método toExponential() retorna uma string com o número arredondado
+        e escrito usando a notação exponencial.
+    </p>
+    <p id="demo2"></p>
+    <p>
+        O método toFixed() retorna uma string com o número escrito com uma
+        quantidade especificada de casas depois da vírgula. toFixed(2) é usando
+        especialmente com dados monetários.
+    </p>
+    <p id="demo3"></p>
+    <p>
+        O método Number() converte valores em números.
+    </p>
+    <p id="demo4"></p>
+    <p>O método parseInt() analisa uma string e retorna um número inteiro.
+        Espaços são permitidos. Somente o primeiro número é retornado.
+    </p>
+    <p id="demo5"></p>
+    <p>
+        O método parseFloat() converte strings em números de ponto flutuante
+    </p>
+    <p id="demo6"></p>
+    <script>
+        let meuNumero = 32;
+        document.getElementById("demo1").innerHTML = 
+            "32 em decimal = " + "<br><br>" +
+            "Hexatrigesimal (base 36): " + meuNumero.toString(36) + "<br>" +
+            "Duotrigesimal (base 32): " + meuNumero.toString(32) + "<br>" +
+            "Hexadecimal (base 16): " + meuNumero.toString(16) + "<br>" +
+            "Duodecimal (base 12): " + meuNumero.toString(12) + "<br>" +
+            "Decimal (base 10): " + meuNumero.toString(10) + "<br>" +
+            "Octal (base 8): " + meuNumero.toString(8) + "<br>" +
+            "Binário (base 2): " + meuNumero.toString(2);
+        let x = 9.656;
+        document.getElementById("demo2").innerHTML = 
+            x.toExponential() +  "<br>" +
+            x.toExponential(2) +  "<br>" +
+            x.toExponential(4) +  "<br>" +
+            x.toExponential(6);
+        document.getElementById("demo3").innerHTML = 
+            x.toFixed() +  "<br>" +
+            x.toFixed(2) +  "<br>" +
+            x.toFixed(4) +  "<br>" +
+            x.toFixed(6);
+        document.getElementById("demo4").innerHTML =
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number(" 10") + "<br>" +
+            Number("10 ") + "<br>" +
+            Number(" 10 ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("Rafael");
+        document.getElementById("demo5").innerHTML =
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 anos") + "<br>" +
+            parseInt("anos 10");
+        document.getElementById("demo6").innerHTML = 
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("10 anos") + "<br>" +
+            parseFloat("anos 10");
+    </script>
+</body>
+</html>

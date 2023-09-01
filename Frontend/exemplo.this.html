@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Palavra chave this no JavaScript</h1>
+        <p>
+            Neste exemplo, this se refere a pessoa2, 
+            mesmo sendo um método de pessoa1:
+        </p>
+        <p id="demo"></p>
+        <script>
+            const pessoa1 = {
+                nomeCompleto: function(){
+                    return this.nome + " " + this.sobreNome;
+                }
+            }
+            const pessoa2 = {
+                nome: "Isa",
+                sobreNome: "Adora",
+            }
+            let x = pessoa1.nomeCompleto.call(pessoa2);
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

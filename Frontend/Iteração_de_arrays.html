@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <h1>Iteração de Arrays</h1>
+        <h2>Método forEach()</h2>
+        <p>Este método chama uma função para cada elemento do array.</p>
+        <p id="demo1"></p>
+        <h2>Método map()</h2>
+        <p>Cria um novo array executando uma função para cada elemento.</p>
+        <p id="demo2"></p>
+        <h2>Método filter()</h2>
+        <p>
+            Cria um novo array a partir de elementos que passem num
+            determinado teste
+        </p>
+        <p id="demo3"></p>
+        <script>
+            const numeros = [45, 4, 9, 16, 25];
+
+            let texto = "";
+            numeros.forEach(minhaFuncao);
+
+            function minhaFuncao(valor){
+                texto += valor + "<br>";
+            }
+            document.getElementById("demo1").innerHTML = texto;
+            const numvezdois = numeros.map(minhaOutraFunc);
+            function minhaOutraFunc(valor){
+                return valor * 2;
+            }
+            document.getElementById("demo2").innerHTML = numvezdois;
+            const maiorDe18 = numeros.filter(minhaTerFunc);
+            function minhaTerFunc(valor){
+                return valor > 18;
+            }
+            document.getElementById("demo3").innerHTML = maiorDe18;
+        </script>
+    </body>
+</html>
